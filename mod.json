@@ -1,0 +1,49 @@
+{
+	"geode": "4.0.1",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "elkarmouhi.macro-recorder",
+	"name": "Macro & Recorder",
+	"version": "v1.0.0",
+	"developer": "elkarmouhi",
+	"description": "Record a clean run in Practice Mode and auto-replay it in Normal Mode.",
+	"settings": {
+		"ffmpeg-path": {
+			"type": "string",
+			"name": "FFmpeg Path",
+			"description": "Path to ffmpeg.exe (Windows only).",
+			"default": "ffmpeg"
+		},
+		"video-encoder": {
+			"type": "string",
+			"name": "Video Encoder",
+			"description": "libx264 = CPU. h264_nvenc = NVIDIA, h264_amf = AMD, h264_qsv = Intel.",
+			"default": "libx264",
+			"one-of": ["libx264", "h264_nvenc", "h264_amf", "h264_qsv"]
+		},
+		"record-fps": {
+			"type": "int",
+			"name": "Recording FPS",
+			"description": "Output framerate for the screen recorder.",
+			"default": 120,
+			"min": 30,
+			"max": 240
+		},
+		"mic-device": {
+			"type": "string",
+			"name": "Microphone Device",
+			"description": "Exact device name. Leave empty to auto-detect.",
+			"default": ""
+		},
+		"internal-device": {
+			"type": "string",
+			"name": "Game Audio Device",
+			"description": "Loopback device name. Leave empty to auto-detect.",
+			"default": ""
+		}
+	}
+}
